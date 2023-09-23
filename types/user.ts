@@ -6,7 +6,7 @@ export interface User {
     id: string;
     username: string;
     password: string;
-    roles: Record<string, number>;
+    roles: number[];
     refreshToken?: string
 }
 

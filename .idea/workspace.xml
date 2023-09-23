@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c320fd87-93aa-4838-b48e-f39448051618" name="Default Changelist" comment="Project structure">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/business_card_back.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="c320fd87-93aa-4838-b48e-f39448051618" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/controllers/pageController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/visitorController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/records/page.record.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/records/visitor.record.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/page.route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/visitor.route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/logoutController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/logoutController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registerController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registerController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authentication.router.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/card.router.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/user.router.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/verifyRoles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/verifyRoles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/records/user.record.ts" beforeDir="false" afterPath="$PROJECT_DIR$/records/user.record.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/auth.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routers/auth.route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/user.route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/routers/user.route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +44,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\JavaScript\BusinessCard\business_card_front\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -71,7 +76,15 @@
       <workItem from="1692306376627" duration="1523000" />
       <workItem from="1692347282709" duration="166000" />
       <workItem from="1694550498256" duration="1344000" />
-      <workItem from="1694809019908" duration="529000" />
+      <workItem from="1694809019908" duration="763000" />
+      <workItem from="1694946844251" duration="7457000" />
+      <workItem from="1694977068050" duration="1006000" />
+      <workItem from="1695032224397" duration="6025000" />
+      <workItem from="1695063317527" duration="4824000" />
+      <workItem from="1695206199341" duration="2700000" />
+      <workItem from="1695283841812" duration="3403000" />
+      <workItem from="1695371685420" duration="708000" />
+      <workItem from="1695505041380" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="init express ts app">
       <created>1692287128561</created>
@@ -87,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692308130721</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="0.1.0 - don't use older commits">
+      <created>1694809777949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694809777949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init express ts app" />
     <MESSAGE value="Project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project structure" />
+    <MESSAGE value="0.1.0 - don't use older commits" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1.0 - don't use older commits" />
   </component>
 </project>

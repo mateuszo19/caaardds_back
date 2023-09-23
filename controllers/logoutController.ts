@@ -1,12 +1,5 @@
 import {User} from "../types/user";
 
-const usersDB = {
-    users: require('../model/users.json') as User[],
-    setUsers: function (data: User[]): void {
-        this.users = data;
-    },
-};
-
 import {Request, Response} from 'express';
 import * as fsPromises from 'fs/promises'
 import path from "path";
@@ -29,13 +22,6 @@ export default class logoutController {
 
         //Delete refreshToken in db
         await AuthRecord.deleteToken(foundUser.id)
-        const otherUsers = usersDB.users.filter(person => person.refreshToken !== foundUser.refreshToken);
-        const currentUser = {...foundUser, refreshToken: ''};
-        usersDB.setUsers([...otherUsers, currentUser]);
-        await fsPromises.writeFile(
-            path.join(__dirname, "..", "model", "users.json"),
-            JSON.stringify(usersDB.users)
-        )
 
         res.clearCookie('jwt', {httpOnly: true}) //secure: true - only on server with https
         res.sendStatus(204);

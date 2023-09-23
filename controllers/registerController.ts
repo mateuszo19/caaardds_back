@@ -14,7 +14,7 @@ export default class registerController {
             //encrypt password
             const hashedPwd = await bcrypt.hash(pwd, 10);
             //store new user
-            const newUser: NewUser = {"username": user,"roles": {"User": 2001} , "password": hashedPwd};
+            const newUser: NewUser = {"username": user,"roles": [ 2001, 1984], "password": hashedPwd};
             const user1 = new UserRecord(newUser);
             await user1.registerUser();
 

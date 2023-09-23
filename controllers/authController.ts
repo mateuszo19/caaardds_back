@@ -19,16 +19,18 @@ export default class authController {
         const match = await bcrypt.compare(pwd, foundUser.password);
         if(match){
             // const roles = Object.values(foundUser.roles)
-            const values = Object.keys(foundUser.roles).map(key => foundUser.roles[key]);
-            const roles = values.join(",");
+            // const values = Object.keys(foundUser.roles).map(key => foundUser.roles[key]);
+            // const roles = values.join("");
+            const roles = Object.values(foundUser.roles);
+
             //create JWTs
             const accessToken = jwt.sign(
                 {
-                    "UserInfo":{
-                        'username': foundUser.username,
-                        'roles': roles
+                    "UserInfo": {
+                        "username": foundUser.username,
+                        "roles": roles
                     }
-                    },
+                },
                 process.env.ACCESS_TOKEN_SECRET ? process.env.ACCESS_TOKEN_SECRET : "123",
                 {
                     expiresIn: '1h'

@@ -7,7 +7,7 @@ export class UserRecord implements User{
     public id: string;
     public username: string;
     public password: string;
-    public roles: Record<string, number>;
+    public roles: number[];
 
     constructor(obj: NewUser) {
         //@ts-ignore
@@ -21,9 +21,10 @@ export class UserRecord implements User{
         if (!this.id) {
             this.id = uuid();
         }
+        const rolesArray = this.roles.map(Number);
         await pool.query(
             `INSERT INTO users (id, username, password, roles) VALUES ($1, $2, $3, $4)`,
-            [this.id, this.username, this.password, this.roles]
+            [this.id, this.username, this.password, rolesArray]
             )
     }
 

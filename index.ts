@@ -9,9 +9,11 @@ import {authRoute} from "./routers/auth.route";
 import {userRoute} from "./routers/user.route";
 import {registerRoute} from "./routers/register.route";
 import {refreshRoute} from "./routers/refresh.route";
+import {pageRoute} from './routers/page.route';
+import {logoutRoute} from "./routers/logout.route";
+import { visitorRoute } from './routers/visitor.route';
 //Middlewares
 import {verifyJWT} from "./middleware/verifyJWT";
-import {logoutRoute} from "./routers/logout.route";
 
 dotenv.config();
 
@@ -37,9 +39,11 @@ app.use('/authenticate', authRoute);
 app.use('/register', registerRoute);
 app.use('/refresh', refreshRoute)
 app.use('/logout', logoutRoute)
+app.use("/visit", visitorRoute)
 //Protected
 app.use(verifyJWT);
 app.use('/user', userRoute);
+app.use('/page', pageRoute)
 
 
 app.listen(port, () => {
